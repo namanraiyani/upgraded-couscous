@@ -1,0 +1,112 @@
+/* HomePage.css */
+
+.HomePage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 91.4vh;
+  background-color: #282c34;
+  color: white;
+  font-family: 'Arial', sans-serif;
+}
+
+.HomePage-header {
+  width: 80%;
+  max-width: 1200px;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.container-left,
+.container-right {
+  width: 400px;
+  height: 400px;
+  padding: 20px;
+  background-color: #3a3f47;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 0 10px;
+}
+
+.qr-code {
+  max-width: 60%;
+  height: auto;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.input-group label {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.input-group input {
+  margin-left: 10px;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  background-color: #50575e;
+  color: white;
+}
+
+.button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #10e842;
+  color: #282c34;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #21a1f1;
+}
+
+.generate-button {
+  margin-top: 20px;
+  padding: 10px 40px;
+  background-color: #61dafb;
+  color: #282c34;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.generate-button:hover {
+  background-color: #21a1f1;
+}
+
+.date-time-inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.date-time-inputs label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.date-time-inputs input[type="date"],
+.date-time-inputs input[type="time"] {
+  margin-left: 10px;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  background-color: #50575e;
+  color: white;
+}

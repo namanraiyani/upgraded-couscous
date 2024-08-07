@@ -1,0 +1,47 @@
+.GeneratePage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 91.4vh;
+  background-color: #282c34;
+  color: white;
+  font-family: 'Arial', sans-serif;
+  width: auto;
+}
+
+.center-content {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #10e842;
+  color: #282c34;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #21a1f1;
+}
+
+/* Loading animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loader {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top: 4px solid white;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
