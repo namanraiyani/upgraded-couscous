@@ -18,7 +18,7 @@ function DatePage() {
             const end = new Date(`${endDate}T${endTime}`).getTime() / 1000;
 
             // Send timestamps to backend
-            fetch(`http://43.205.0.141:3000/timestamps/${encodeURIComponent(userEmail)}`, {
+            fetch(`https://43.205.0.141:3000/timestamps/${encodeURIComponent(userEmail)}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
