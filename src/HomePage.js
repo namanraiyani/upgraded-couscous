@@ -11,7 +11,7 @@ function HomePage() {
   const fetchQRCode = async () => {
     const encodedEmail = encodeURIComponent(userEmail); // Encode the email
     try {
-      const response = await fetch(`http://43.205.0.141:3000/qr/${encodedEmail}`);
+      const response = await fetch(`https://43.205.0.141:3000/qr/${encodedEmail}`);
       if (response.ok) {
         const blob = await response.blob();
         const url = URL.createObjectURL(blob);
@@ -27,7 +27,7 @@ function HomePage() {
   useEffect(() => {
     const fetchStatus = () => {
       const encodedEmail = encodeURIComponent(userEmail); // Encode the email
-      fetch(`http://43.205.0.141:3000/status/${encodedEmail}`)
+      fetch(`https://43.205.0.141:3000/status/${encodedEmail}`)
         .then(response => response.text())
         .then(data => {
           if (data === 'ready') {
