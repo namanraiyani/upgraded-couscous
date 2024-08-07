@@ -10,7 +10,7 @@ function GeneratePage() {
   const downloadExcel = async () => {
     try {
       const encodedEmail = encodeURIComponent(userEmail);
-      const response = await fetch(`http://43.205.0.141:3000/download/${encodedEmail}`);
+      const response = await fetch(`https://43.205.0.141:3000/download/${encodedEmail}`);
       if (response.ok) {
         const blob = await response.blob();
         const url = window.URL.createObjectURL(blob);
@@ -32,7 +32,7 @@ function GeneratePage() {
   const uploadFile = async () => {
     try {
       const encodedEmail = encodeURIComponent(userEmail);
-      const response = await fetch(`http://43.205.0.141:3000/upload/${encodedEmail}`, {
+      const response = await fetch(`https://43.205.0.141:3000/upload/${encodedEmail}`, {
         method: 'POST',
       });
       if (response.ok) {
@@ -54,7 +54,7 @@ function GeneratePage() {
   useEffect(() => {
     const fetchStatus = () => {
       const encodedEmail = encodeURIComponent(userEmail);
-      fetch(`http://43.205.0.141:1234/file-status/${encodedEmail}`)
+      fetch(`https://43.205.0.141:1234/file-status/${encodedEmail}`)
         .then(response => response.text())
         .then(data => {
           if (data === 'available') {
