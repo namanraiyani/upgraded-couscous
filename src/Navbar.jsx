@@ -13,7 +13,7 @@ function Navbar() {
     // Function to fetch user info from the server
     const fetchUserInfo = async () => {
         try {
-            const response = await fetch('http://43.205.0.141:3000/user-info', {
+            const response = await fetch('https://43.205.0.141:3000/user-info', {
                 method: 'GET',
                 credentials: 'include', // Include credentials to send cookies with the request
             });
@@ -41,7 +41,7 @@ function Navbar() {
 }, [setUserEmail]);
 
     const initializeWhatsAppClient = (email) => {
-        axios.post('http://43.205.0.141:3000/initialize', { email })
+        axios.post('https://43.205.0.141:3000/initialize', { email })
             .then(response => {
                 console.log(response.data);
                 if (response.data.success) {
@@ -58,7 +58,7 @@ function Navbar() {
     const handleClientDisconnection = async () => {
         try {
             const encodedEmail = encodeURIComponent(user.email);
-            await fetch(`http://43.205.0.141:3000/disconnect/${encodedEmail}`, {
+            await fetch(`https://43.205.0.141:3000/disconnect/${encodedEmail}`, {
                 method: 'POST',
                 credentials: 'include', // Include credentials to send cookies with the request
             });
@@ -69,7 +69,7 @@ function Navbar() {
 
     // Function to handle login
     const handleLogin = () => {
-        window.location.href = 'http://43.205.0.141:3000/auth';
+        window.location.href = 'https://43.205.0.141:3000/auth';
     };
 
     // Function to handle logout
